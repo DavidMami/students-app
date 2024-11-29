@@ -13,6 +13,8 @@ class NewStudentActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        supportActionBar?.title = "New Students"
+
         binding.btnSave.setOnClickListener {
             val student = Student(
                 id = binding.etStudentId.text.toString(),

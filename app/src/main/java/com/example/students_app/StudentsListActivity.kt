@@ -16,6 +16,8 @@ class StudentsListActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        supportActionBar?.title = "Students List"
+
         adapter = StudentsAppAdapter(StudentRepository.getAllStudents())
         { student ->
             val intent = Intent(this, StudentDetailsActivity::class.java)

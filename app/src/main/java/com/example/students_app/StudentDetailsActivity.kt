@@ -14,6 +14,8 @@ class StudentDetailsActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        supportActionBar?.title = "Students Details"
+
         val studentId = intent.getStringExtra("STUDENT_ID")
         if (studentId != null) {
             val student = StudentRepository.getStudentById(studentId)

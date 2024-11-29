@@ -14,6 +14,8 @@ class EditStudentActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        supportActionBar?.title = "Edit Students"
+
         val studentId = intent.getStringExtra("STUDENT_ID")
         student = StudentRepository.getStudentById(studentId!!)!!
 
