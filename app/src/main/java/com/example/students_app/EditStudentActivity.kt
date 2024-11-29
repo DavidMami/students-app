@@ -1,5 +1,6 @@
 package com.example.students_app
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.students_app.databinding.ActivityEditStudentBinding
@@ -33,11 +34,17 @@ class EditStudentActivity : AppCompatActivity() {
             student.isChecked = binding.cbStudentChecked.isChecked
 
             StudentRepository.updateStudent(student)
+
             finish()
         }
 
         binding.btnDelete.setOnClickListener {
             StudentRepository.deleteStudent(student.id)
+
+            val intent = Intent(this, StudentsListActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
+            startActivity(intent)
+
             finish()
         }
 

@@ -38,6 +38,11 @@ class StudentsAppAdapter(
         studentHolder.tvStudentName.text = student.name
         studentHolder.cbStudentChecked.isChecked = student.isChecked
 
+        studentHolder.cbStudentChecked.setOnCheckedChangeListener { _, isChecked ->
+            student.isChecked = isChecked
+            StudentRepository.updateStudent(student)
+        }
+
         studentHolder.itemView.setOnClickListener {
             onStudentClick(student)
         }

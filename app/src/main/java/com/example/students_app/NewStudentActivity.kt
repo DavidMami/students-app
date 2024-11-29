@@ -20,7 +20,8 @@ class NewStudentActivity : AppCompatActivity() {
                 id = binding.etStudentId.text.toString(),
                 name = binding.etStudentName.text.toString(),
                 phone = binding.etStudentPhone.text.toString(),
-                address = binding.etStudentAddress.text.toString()
+                address = binding.etStudentAddress.text.toString(),
+                isChecked = binding.cbStudentChecked.isChecked
             )
             StudentRepository.addStudent(student)
             finish()
