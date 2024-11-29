@@ -1,75 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="20dp">
+<layout>
 
-    <LinearLayout
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <ImageView
-            android:id="@+id/imgStudentPic"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/student_placeholder"
-            android:layout_gravity="center"
-            android:contentDescription="Student Picture"
-            android:layout_marginBottom="16dp" />
-
-        <TextView
-            android:id="@+id/tvStudentName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Name: "
-            android:textSize="18sp"
-            android:layout_marginBottom="18dp" />
-
-        <TextView
-            android:id="@+id/tvStudentId"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="ID: "
-            android:textSize="18sp"
-            android:layout_marginBottom="18dp" />
-
-        <TextView
-            android:id="@+id/tvStudentPhone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Phone: "
-            android:textSize="18sp"
-            android:layout_marginBottom="18dp" />
-
-        <TextView
-            android:id="@+id/tvStudentAddress"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Address: "
-            android:textSize="18sp"
-            android:layout_marginBottom="16dp" />
-
-        <CheckBox
-            android:id="@+id/cbStudentChecked"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Checked"
-            android:layout_marginBottom="16dp"
-            android:enabled="false" />
+        android:layout_height="match_parent"
+        android:padding="20dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
+            android:orientation="vertical">
 
-            <Button
-                android:id="@+id/btnEdit"
+            <ImageView
+                android:id="@+id/imgStudentPic"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"
+                android:contentDescription="Student Picture"
+                android:src="@drawable/student_placeholder" />
+
+            <TextView
+                android:id="@+id/tvStudentName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="18dp"
+                android:text="Name: "
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvStudentId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="18dp"
+                android:text="ID: "
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvStudentPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="18dp"
+                android:text="Phone: "
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvStudentAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Address: "
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/cbStudentChecked"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Edit" />
+                android:layout_marginBottom="16dp"
+                android:enabled="false"
+                android:text="Checked" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Edit" />
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
-</ScrollView>
+    </ScrollView>
+</layout>
